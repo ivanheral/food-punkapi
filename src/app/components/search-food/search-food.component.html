@@ -1,0 +1,5 @@
+<input type="text" (input)="searchFood($event)" placeholder="Find Food" />
+<div class="container">
+  <app-item-food *ngFor="let item_food of getListFood()" [food]="item_food">
+  </app-item-food>
+</div>
