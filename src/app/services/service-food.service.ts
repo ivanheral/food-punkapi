@@ -15,7 +15,7 @@ export class ServiceFoodService {
 
   async getFood(food: string): Promise<Array<Food>> {
     return await this.http
-      .get<Array<Food>>(`${environment.apiUrl}${food}`)
+      .get<Array<Food>>(`${environment.apiUrl}?food=${food}`)
       .toPromise()
       .catch(this.handleError);
   }
